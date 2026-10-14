@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* Fallback for machines without Inter installed (lib.js FONTS lists it after the system font). */
+  @font-face { font-family: "Inter Bundled"; src: url(fonts/Inter.woff2) format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: "JetBrains Mono"; src: url(fonts/JetBrainsMono.woff2) format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif.woff2) format("woff2"); font-style: normal; }
+  @font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif-Italic.woff2) format("woff2"); font-style: italic; }
+  @font-face { font-family: "Space Grotesk"; src: url(fonts/SpaceGrotesk.woff2) format("woff2"); font-weight: 300 700; }
+  @font-face { font-family: "Hind Siliguri"; src: url(fonts/HindSiliguri-500.woff2) format("woff2"); font-weight: 500; }
+  @font-face { font-family: "Hind Siliguri"; src: url(fonts/HindSiliguri-700.woff2) format("woff2"); font-weight: 700; }
+  html, body { margin: 0; background: #000; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script type="module">
+  // The renderer opens stage.html?scene=name&scale=1 and then calls
+  // window.frame(i) for every frame it wants. Opening the page in a normal
+  // browser (without ?render) plays the scene live, for quick iteration.
+  const q = new URLSearchParams(location.search);
+  const name = q.get('scene');
+  const scale = parseFloat(q.get('scale') || '1');
+  const mod = await import(`../scenes/${name}.js`);
+  const S = mod.default;
+  const canvas = document.getElementById('c');
+  canvas.width = Math.round(S.width * scale);
+  canvas.height = Math.round(S.height * scale);
+  const ctx = canvas.getContext('2d');
+
+  const families = ['700 20px "Inter Display"', '600 20px "Inter"', '400 20px "JetBrains Mono"',
+    '700 20px "JetBrains Mono"', '700 20px "Inter Bundled"', '20px "Instrument Serif"', 'italic 20px "Instrument Serif"',
+    '700 20px "Space Grotesk"', '500 20px "Hind Siliguri"', '700 20px "Hind Siliguri"'];
+  await Promise.all(families.map((f) => document.fonts.load(f, 'Aa০১')));
+  if (S.setup) await S.setup();
+
+  const fps = parseFloat(q.get('fps') || S.fps || 30);
+  function draw(t) {
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    ctx.clearRect(0, 0, S.width, S.height);
+    ctx.globalAlpha = 1;
+    S.draw(ctx, t, S.width, S.height);
+  }
+  window.meta = { width: S.width, height: S.height, duration: S.duration, fps };
+  window.frame = (i) => { draw(i / fps); return canvas.toDataURL('image/png'); };
+  window.ready = true;
+
+  if (!q.has('render')) {
+    const t0 = performance.now();
+    const loop = () => { draw(((performance.now() - t0) / 1000) % S.duration); requestAnimationFrame(loop); };
+    loop();
+  }
+</script>
+</body>
+</html>
