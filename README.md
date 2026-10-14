@@ -1,18 +1,86 @@
-# 💫 About Me:
-# 👋 Hi, I'm Omar Kassem<br><br>## About Me<br><br>I am an ambitious student currently pursuing a degree in **Artificial Intelligence** at Johannes Kepler University Linz (JKU). My passion lies in exploring innovative solutions in **AI**, **Data Science**, and **Machine Learning**. With a strong analytical mindset and a drive to continuously learn, I aim to contribute to impactful projects and collaborate with like-minded individuals.<br><br>---<br><br>## Interests<br><br>- 🤖 **Artificial Intelligence**: Exploring neural networks, deep learning, and their applications in solving real-world problems.<br>- 📊 **Data Science**: Analyzing data to uncover insights and create data-driven solutions.<br>- 🚗 **Car Photography**: Capturing stunning moments, especially in rainy weather, blending creativity with technology.<br><br>---<br><br>## What I'm Currently Learning<br><br>- Advanced topics in **AI and Machine Learning**.<br>- Developing practical projects to gain real-world experience.<br>- Exploring **collaborative software development** practices.<br><br>---<br><br>## Skills & Tools<br><br>- Programming: Python, R, and basics of C++<br>- Data Analysis: Pandas, NumPy, and Matplotlib<br>- Machine Learning Frameworks: TensorFlow, PyTorch, and Scikit-learn<br>- Database Management: MySQL and SQLite<br>- Version Control: Git & GitHub<br><br>---<br><br>## How to Reach Me<br><br>- 📧 **Email**: [omarkassemx154@gmail.com](mailto:omarkassemx154@gmail.com)<br>- 🌐 **LinkedIn**: [Connect with me](https://www.linkedin.com/in/omar-kassem-75554a201/)  <br><br>---<br><br>## Fun Fact<br><br>⚡ My favorite hobby is capturing **car photography** in the rain—it combines my love for creativity and attention to detail!<br><br>---<br><br>## Goals<br><br>- 💡 Contribute to **open-source AI projects**.<br>- 🌍 Collaborate on **impactful tech initiatives** that solve pressing problems.<br>- 📈 Grow as a developer and researcher in the AI and Data Science fields.<br>
+<img src="assets/banner.gif" alt="Omar Kassem. JKU Linz, Artificial Intelligence. I build AI agents that report their own work, models that say “not sure”, products in 24-hour hackathons, and apps that tell you what to wear." width="100%">
 
+<p>
+  <a href="https://www.linkedin.com/in/omar-kassem-75554a201/"><img src="https://img.shields.io/badge/LinkedIn-Omar%20Kassem-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:omarkassemx154@gmail.com"><img src="https://img.shields.io/badge/Email-omarkassemx154%40gmail.com-1f2430?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <img src="https://img.shields.io/badge/JKU%20Linz-Artificial%20Intelligence-7cc4ad?style=flat-square" alt="JKU Linz, Artificial Intelligence">
+</p>
 
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![nVIDIA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white) ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Adobe Lightroom Classic](https://img.shields.io/badge/Adobe%20Lightroom%20Classic-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom%20Classic&logoColor=white) ![Adobe Lightroom](https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white) ![Gimp](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![OpenSea](https://img.shields.io/badge/OpenSea-%232081E2.svg?style=for-the-badge&logo=opensea&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![Xbox](https://img.shields.io/badge/xbox-%23107C10.svg?style=for-the-badge&logo=xbox&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white) ![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white) ![Battle.net](https://img.shields.io/badge/battle.net-%2300AEFF.svg?style=for-the-badge&logo=battle.net&logoColor=white) ![EA](https://img.shields.io/badge/ea-%23000000.svg?style=for-the-badge&logo=ea&logoColor=white) ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white) ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white) ![Ubisoft](https://img.shields.io/badge/Ubisoft-%23F5F5F5.svg?style=for-the-badge&logo=Ubisoft&logoColor=black) ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white) ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white) ![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![PlayStation Network](https://img.shields.io/badge/PSN-%230070D1.svg?style=for-the-badge&logo=Playstation&logoColor=white) ![AMD](https://img.shields.io/badge/AMD-%23000000.svg?style=for-the-badge&logo=amd&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=omarjku&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=omarjku&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=omarjku&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+I study **Artificial Intelligence at Johannes Kepler University Linz** and build AI products end to end: the model, the guardrails around it, and the app people actually touch. Most of what's below started as a 24-hour hackathon and kept going after the deadline.
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=gruvbox)
+What I care about in an AI system: it shows its evidence, it says **"not sure"** instead of guessing, and a human makes the final call.
+
+## Selected work
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/Omar-s-Org/Biohackers"><img src="assets/cards/genome.gif" alt="Genome Firewall: scanning an E. coli genome for resistance genes and returning calibrated per-antibiotic verdicts" width="100%"></a>
+      <h3><a href="https://github.com/Omar-s-Org/Biohackers">Genome Firewall</a></h3>
+      Upload an <i>E. coli</i> genome, get a calibrated call per antibiotic, backed by the resistance genes found, and an honest <b>no-call</b> when the evidence is thin. Trained and tested on 2,127 genomes, held out by lineage.<br>
+      <sub>🏆 Winning project, Hack-Nation 6 (Vienna hub) · Python · scikit-learn · AMRFinderPlus · Streamlit</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/Omar-s-Org/Orchestra"><img src="assets/cards/orchestra.gif" alt="Orchestra: agents working through a dependency graph of tasks, and a human approving the milestone" width="100%"></a>
+      <h3><a href="https://github.com/Omar-s-Org/Orchestra">Orchestra</a></h3>
+      Project management where every person works through their own AI agent. Agents pick up unlocked tasks over MCP and report what they did and what it cost; humans approve the work.<br>
+      <sub>Hackathon prototype · TypeScript · Express · MCP · SQLite · React</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/omarjku/BengaliPharaohs"><img src="assets/cards/rice.gif" alt="Rice-leaf advisor: an offline phone classifies a rice leaf and says not sure for a bean leaf" width="100%"></a>
+      <h3><a href="https://github.com/omarjku/BengaliPharaohs">Rice-leaf advisor</a></h3>
+      An offline advisor for flood-hit rice farmers in Bangladesh. A 6.1 MB on-device classifier answers only when it's confident, and otherwise says "not sure, ask your agriculture officer". In Bangla.<br>
+      <sub>Hack-Nation 2026 · World Bank challenge · PyTorch · ONNX · FastAPI · Next.js</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/omarjku/Leyrd"><img src="assets/cards/leyrd.gif" alt="Leyrd: the forecast is adjusted for wind, biking and feedback, and the coach picks three layers" width="100%"></a>
+      <h3><a href="https://github.com/omarjku/Leyrd">Leyrd</a></h3>
+      A layer coach: how many layers to wear today, picked from your own wardrobe, using your commute forecast, 10 years of local climate and your "too cold / too warm" feedback. <a href="https://leyrd.onrender.com">Live</a>.<br>
+      <sub>Next.js 15 · TypeScript · Postgres · Open-Meteo · Claude</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/omarjku/pixel-perfect"><img src="assets/cards/agentmesh.gif" alt="AgentMesh: agents bid on a translation task, the best one wins and is paid over Lightning" width="100%"></a>
+      <h3><a href="https://github.com/omarjku/pixel-perfect">AgentMesh</a></h3>
+      A marketplace where AI agents compete for your task and get paid in sats over Lightning. This repo is the web app; the full project is <a href="https://github.com/px404/EnrichedUranium">px404/EnrichedUranium</a>.<br>
+      <sub>Team project · React · TypeScript · Tailwind · shadcn/ui</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/omarjku/Machine-Learning-Project"><img src="assets/cards/cnn.gif" alt="MyCNN: a grayscale image flows through four convolution blocks to scores over 20 classes" width="100%"></a>
+      <h3><a href="https://github.com/omarjku/Machine-Learning-Project">MyCNN</a></h3>
+      A convolutional image classifier written from scratch in PyTorch: four conv blocks with BatchNorm, four augmentation pipelines, 20 classes, about 1.8M parameters.<br>
+      <sub>Python · PyTorch · torchvision · NumPy</sub>
+    </td>
+  </tr>
+</table>
+
+**Also built with a team:** [Agent on a Leash](https://github.com/crii4me/viseca-agent-leash), a wallet control layer that approves, declines or asks before an AI agent spends money (Swiss {ai} Weeks 2026, 15 hours).
+
+## Toolbox
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![ONNX](https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Claude and MCP](https://img.shields.io/badge/Claude%20%26%20MCP-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+
+## Off the keyboard
+
+📷 Car photography, ideally in the rain. Same thing I like in code: patience, light, and attention to detail.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=omarjku&icon=0&color=1)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<sub>Every animation on this page and in my repos is code, not a screen recording: each frame is drawn on a canvas, rendered in headless Chromium and encoded with ffmpeg. The source is in [`motion/`](motion).</sub>
