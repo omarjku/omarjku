@@ -5,6 +5,9 @@
 <style>
   /* Fallback for machines without Inter installed (lib.js FONTS lists it after the system font). */
   @font-face { font-family: "Inter Bundled"; src: url(fonts/Inter.woff2) format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: "IBM Plex Sans"; src: url(fonts/IBMPlexSans.woff2) format("woff2"); font-weight: 100 700; }
+  @font-face { font-family: "IBM Plex Serif"; src: url(fonts/IBMPlexSerif.woff2) format("woff2"); font-style: normal; font-weight: 500; }
+  @font-face { font-family: "IBM Plex Serif"; src: url(fonts/IBMPlexSerif-Italic.woff2) format("woff2"); font-style: italic; font-weight: 400; }
   @font-face { font-family: "JetBrains Mono"; src: url(fonts/JetBrainsMono.woff2) format("woff2"); font-weight: 100 900; }
   @font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif.woff2) format("woff2"); font-style: normal; }
   @font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif-Italic.woff2) format("woff2"); font-style: italic; }
@@ -24,6 +27,8 @@
   const q = new URLSearchParams(location.search);
   const name = q.get('scene');
   const scale = parseFloat(q.get('scale') || '1');
+  // ?video=1 turns on effects that only make sense in an MP4 (film grain).
+  globalThis.__video = q.has('video');
   const mod = await import(`../scenes/${name}.js`);
   const S = mod.default;
   const canvas = document.getElementById('c');
@@ -33,7 +38,7 @@
 
   const families = ['700 20px "Inter Display"', '600 20px "Inter"', '400 20px "JetBrains Mono"',
     '700 20px "JetBrains Mono"', '700 20px "Inter Bundled"', '20px "Instrument Serif"', 'italic 20px "Instrument Serif"',
-    '700 20px "Space Grotesk"', '500 20px "Hind Siliguri"', '700 20px "Hind Siliguri"'];
+    '700 20px "Space Grotesk"', '700 20px "IBM Plex Sans"', '400 20px "IBM Plex Sans"', '500 20px "IBM Plex Serif"', 'italic 400 20px "IBM Plex Serif"', '500 20px "Hind Siliguri"', '700 20px "Hind Siliguri"'];
   await Promise.all(families.map((f) => document.fonts.load(f, 'Aa০১')));
   if (S.setup) await S.setup();
 
@@ -44,8 +49,11 @@
     ctx.globalAlpha = 1;
     S.draw(ctx, t, S.width, S.height);
   }
-  window.meta = { width: S.width, height: S.height, duration: S.duration, fps };
-  window.frame = (i) => { draw(i / fps); return canvas.toDataURL('image/png'); };
+  window.meta = { width: S.width, height: S.height, duration: S.duration, fps, music: S.music || null };
+  window.frame = (i, type = 'png') => {
+    draw(i / fps);
+    return type === 'jpeg' ? canvas.toDataURL('image/jpeg', 0.93) : canvas.toDataURL('image/png');
+  };
   window.ready = true;
 
   if (!q.has('render')) {
