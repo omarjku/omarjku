@@ -172,7 +172,7 @@ function drop(ctx, t, len) {
 
 function ask(ctx, t, len) {
   backdrop(ctx, t, C.peri, 0.14);
-  const frames = [[0, 'start'], [B(0, 0.8), 'type9'], [B(0, 1.3), 'type20'], [B(0, 1.8), 'type34'], [B(0, 2.3), 'typed'], [len - 0.1, 'loading']];
+  const frames = [[0, 'start'], [B(0, 0.8), 'type9'], [B(0, 1.3), 'type20'], [B(0, 1.8), 'type34'], [B(0, 2.3), 'typed'], [len - 0.12, 'loading']];
   const cur = frames.filter(([at]) => t >= at).pop()[1];
   const cam = camAt([{ t: 0, x: 640, y: 360, z: 1.0 }, { t: len, x: 652, y: 410, z: 1.12, e: ease.inOutCubic }], t);
   withCamera(ctx, W, H, cam, () => {
@@ -182,53 +182,70 @@ function ask(ctx, t, len) {
   });
   kicker(ctx, 'Step 1', 64, 250, seg(t, 0.1, 0.4));
   caption(ctx, 'One sentence in.', 64, 320, t, 0.15, { size: 60 });
-  text(ctx, 'Who you are, and what you are', 64, 380, { size: 24, weight: 400, family: SANS, color: '#aab3e6', alpha: seg(t, 0.6, 1.0) });
-  text(ctx, 'about to do.', 64, 412, { size: 24, weight: 400, family: SANS, color: '#aab3e6', alpha: seg(t, 0.7, 1.1) });
+  text(ctx, 'Who you are, and what you', 64, 380, { size: 24, weight: 400, family: SANS, color: '#aab3e6', alpha: seg(t, 0.6, 1.0) });
+  text(ctx, 'need. As you would say it.', 64, 412, { size: 24, weight: 400, family: SANS, color: '#aab3e6', alpha: seg(t, 0.7, 1.1) });
 }
 
 function screen(ctx, t, len) {
   backdrop(ctx, t, C.peri, 0.14);
-  const half = B(1);                      // first bar: scroll the results; second bar: the source
-  const scrollCss = lerp(0, 560, seg(t, 0.3, half - 0.1, ease.inOutCubic));
-  const showSource = t >= half;
-  const cam = camAt([{ t: 0, x: 646, y: 360, z: 1.04 }, { t: half, x: 640, y: 362, z: 1.0 }, { t: len, x: 652, y: 405, z: 1.12 }], t);
+  const half = B(1);
+  // bar 1: the answer lands, tap source [1], the letter opens with the passage highlighted
+  // bar 2: back to the answer, tap "Show more", scroll through answer lines and key facts
+  const tapChip = 1.25, tapMore = half + 0.2;
+  const cam = camAt([{ t: 0, x: 646, y: 360, z: 1.04 }, { t: half, x: 640, y: 362, z: 1.0 }, { t: len, x: 652, y: 380, z: 1.08 }], t);
   withCamera(ctx, W, H, cam, () => {
-    if (!showSource) {
-      phoneAt(ctx, IMG['results-full'], 640, 45, { scrollY: scrollCss * (PW - 2 * PW * 0.035) / 390, scrollCss });
-    } else {
-      const p = phoneAt(ctx, IMG.source, 640, 45);
-      // highlighter sweep over the cited sentence, like the app's source viewer
-      const hp = seg(t, half + B(0, 1), half + B(0, 1.6), ease.outCubic);
-      if (hp > 0) {
-        const [x0, y0] = p.at(21, 770.6);
-        ctx.save();
-        ctx.globalCompositeOperation = 'multiply';
-        rr(ctx, x0, y0, 348 * p.k * hp, 56.4 * p.k, 6);
-        ctx.fillStyle = rgba(C.hi, 0.75); ctx.fill();
+    if (t < tapChip + 0.15 || (t >= half && t < tapMore + 0.2)) {
+      const p = phoneAt(ctx, IMG.answer, 640, 45);
+      // the answer card glows as it lands
+      const g = seg(t, 0.25, 0.7, ease.outCubic) * (1 - seg(t, 1.0, 1.3));
+      if (g > 0 && t < half) {
+        const [ax, ay] = p.at(16, 469.5);
+        ctx.save(); ctx.globalAlpha *= g;
+        ctx.shadowColor = rgba(C.peri, 0.9); ctx.shadowBlur = 30;
+        rr(ctx, ax - 3, ay - 3, 358 * p.k + 6, 172.1 * p.k + 6, 10); ctx.strokeStyle = rgba(C.peri, 0.9); ctx.lineWidth = 3; ctx.stroke();
         ctx.restore();
       }
+      const [cx, cy] = p.at(225.4 + 10, 490.4 + 10);
+      ripple(ctx, t, tapChip - 0.2, cx, cy);
+      const [mx, my] = p.at(195, 657.6 + 21.5);
+      ripple(ctx, t, tapMore - 0.2, mx, my);
+    } else if (t < half) {
+      const p = phoneAt(ctx, IMG.source, 640, 45);
+      // pulse around the passage the app highlights
+      const q = seg(t, tapChip + 0.45, tapChip + 1.0, ease.outCubic);
+      if (q > 0) {
+        const [hx, hy] = p.at(21, 725);
+        ctx.save(); ctx.globalAlpha *= 1 - q * 0.6;
+        const pad = 4 + q * 10;
+        rr(ctx, hx - pad, hy - pad, 303.4 * p.k + 2 * pad, 19 * p.k + 2 * pad, 8);
+        ctx.strokeStyle = rgba(C.hi, 0.9); ctx.lineWidth = 3; ctx.stroke();
+        ctx.restore();
+      }
+    } else {
+      const scrollCss = lerp(578, 1060, seg(t, tapMore + 0.35, len - 0.15, ease.inOutCubic));
+      phoneAt(ctx, IMG['more-full'], 640, 45, { scrollY: scrollCss * (PW - 2 * PW * 0.035) / 390, scrollCss });
     }
   });
   kicker(ctx, 'Step 2', 64, 200, seg(t, 0.1, 0.4));
-  caption(ctx, 'One screen out.', 64, 270, t, 0.12, { size: 60 });
+  caption(ctx, 'The answer first.', 64, 270, t, 0.12, { size: 60 });
   const items = [
     ['Only what this task needs.', 0.7, C.white],
-    ['Every fact opens its sentence.', half + B(0, 0.5), C.hi],
-    ['Missing? It says so.', half + B(0, 2.5), '#c7cfff'],
+    ['Every value opens its passage.', tapChip + 0.3, C.hi],
+    ['Missing? It says so.', half + B(0, 2.2), '#c7cfff'],
   ];
-  items.forEach(([s, at, col], i) => {
+  items.forEach(([str, at, col], i) => {
     const a = seg(t, at, at + 0.4, ease.outCubic);
     if (a <= 0) return;
     ctx.save(); ctx.globalAlpha *= a; ctx.translate((1 - a) * -30, 0);
     circle(ctx, 76, 352 + i * 54 - 8, 6); ctx.fillStyle = col; ctx.fill();
-    text(ctx, s, 96, 352 + i * 54, { size: 28, weight: 600, family: SANS, color: col });
+    text(ctx, str, 96, 352 + i * 54, { size: 28, weight: 600, family: SANS, color: col });
     ctx.restore();
   });
 }
 
 function views(ctx, t, len) {
   backdrop(ctx, t, C.teal, 0.12);
-  const list = [['Overview', IMG.results, 0], ['Details, dark mode', IMG['dark-details'], 1], ['History', IMG.history, 2]];
+  const list = [['Overview', IMG.answer, 0], ['Details, dark mode', IMG['dark-details'], 1], ['History', IMG.history, 2]];
   list.forEach(([label, img, i]) => {
     const at = i * K.beat;
     const p = seg(t, at, at + 0.45, ease.outExpo);
@@ -248,13 +265,13 @@ function disagree(ctx, t, len) {
   ctx.fillStyle = '#12050c'; ctx.fillRect(0, 0, W, H);
   aurora(ctx, W, H, t, [C.roseDeep, '#3b0a1e'], 0.25 + 0.15 * K.pulse(t, 0, len, 0.3));
   // the app's contradiction card, cropped from the capture and lifted out
-  const img = IMG.results;
+  const img = IMG.contra;
   if (img) {
     const k = img.width / 390;
-    const sx = 16 * k, sy = 501.5 * k, sw = 358 * k, sh = 240.3 * k;
+    const sx = 16 * k, sy = 103.9 * k, sw = 358 * k, sh = 381.8 * k;
     const p = seg(t, 0.05, 0.6, ease.outExpo);
-    const w = 640, h = w * sh / sw;
-    const x = 600, y = 360 - h / 2 + (1 - p) * 60;
+    const w = 470, h = w * sh / sw;
+    const x = 680, y = 360 - h / 2 + (1 - p) * 60;
     ctx.save();
     ctx.globalAlpha *= clamp(p * 1.5);
     ctx.translate(x + w / 2, y + h / 2); ctx.rotate(-0.025 + Math.sin(t * 1.3) * 0.006); ctx.scale(lerp(0.9, 1, p), lerp(0.9, 1, p)); ctx.translate(-x - w / 2, -y - h / 2);
@@ -368,14 +385,14 @@ export default {
       { from: 10, to: 11, type: 'break' }, { from: 11, to: 13, type: 'drop' }, { from: 13, to: 15, type: 'outro' },
     ],
     whooshes: [B(2), B(6), B(7), B(9), B(12), B(13)],
-    ticks: typingTicks,
-    bells: [[B(8, 1), 81], [B(13, 0.5), 74], [B(13, 1.5), 77]],
+    ticks: [...typingTicks, B(7) + 1.05, B(8)],
+    bells: [[B(7) + 1.7, 81], [B(13, 0.5), 74], [B(13, 1.5), 77]],
     hits: [B(10)],
     style: { bass: 'sustain', snare: 'rim', punch: 0.85, hats: 0.75, brightness: 0.95, arp_level: 0.9, drums: 0.9 },
   },
   async setup() {
-    const names = ['start', 'type9', 'type20', 'type34', 'typed', 'loading', 'results', 'results-full', 'source', 'details', 'history',
-      'dark-results', 'dark-details', 'dark-history'];
+    const names = ['start', 'type9', 'type20', 'type34', 'typed', 'loading', 'answer', 'more-full', 'source', 'contra',
+      'dark-details', 'history'];
     const map = Object.fromEntries(names.map((n) => [n, `../assets/secondeye/${n}.jpg`]));
     map.icon = '../assets/secondeye/icon.png';
     IMG = await loadImages(map);
