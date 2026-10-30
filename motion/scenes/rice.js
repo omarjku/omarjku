@@ -189,7 +189,7 @@ export default {
     ctx.fillStyle = C.gold; ctx.beginPath(); ctx.ellipse(82, 66, 7, 14, 0.5, 0, TAU); ctx.fill();
     ctx.strokeStyle = '#0a0f0b'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(77, 74); ctx.lineTo(87, 58); ctx.stroke();
     ctx.restore();
-    text(ctx, 'Rice-leaf advisor', 118, 78, { size: 34, weight: 700, color: C.ink, tracking: -0.5, alpha: seg(t, 0.1, 0.6) });
+    text(ctx, 'Agronomy', 118, 78, { size: 34, weight: 700, color: C.ink, tracking: -0.5, alpha: seg(t, 0.1, 0.6) });
     text(ctx, typed('a photo, an answer, and an honest "not sure"', seg(t, 0.4, 1.8)), 60, 128, { size: 25, family: FONTS.serif, italic: true, color: C.muted });
 
     const lines = [

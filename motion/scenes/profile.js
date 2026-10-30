@@ -121,7 +121,7 @@ export default {
     if (Math.floor(t * 2.2) % 2 === 0 || (show > 0 && show < 1)) { ctx.fillStyle = accent; ctx.fillRect(x + 3, y - 26, 3, 32); }
 
     // project chips
-    const chips = [['Orchestra', '#2f6fed'], ['Genome Firewall', '#7c7cf8'], ['Rice-leaf advisor', '#9be15d'], ['Leyrd', '#7cc4ad'], ['AgentMesh', '#5fb7f5']];
+    const chips = [['Orchestra', '#2f6fed'], ['Genome Firewall', '#7c7cf8'], ['Agronomy', '#9be15d'], ['Leyrd', '#7cc4ad'], ['AgentMesh', '#5fb7f5']];
     let cx = 64;
     chips.forEach(([c, col], i) => {
       const lit = [[0], [1, 2], [0, 4], [3]][k].includes(i) ? clamp(show * 3) : 0;
