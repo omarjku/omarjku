@@ -29,8 +29,8 @@ What I care about in an AI system: it shows its evidence, it says **"not sure"**
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/omarjku/BengaliPharaohs"><img src="assets/cards/rice.gif" alt="Rice-leaf advisor: an offline phone classifies a rice leaf and says not sure for a bean leaf" width="100%"></a>
-      <h3><a href="https://github.com/omarjku/BengaliPharaohs">Rice-leaf advisor</a></h3>
+      <a href="https://github.com/omarjku/BengaliPharaohs"><img src="assets/cards/rice.gif" alt="Agronomy: an offline phone classifies a rice leaf and says not sure for a bean leaf" width="100%"></a>
+      <h3><a href="https://github.com/omarjku/BengaliPharaohs">Agronomy</a></h3>
       An offline advisor for flood-hit rice farmers in Bangladesh. A 6.1 MB on-device classifier answers only when it's confident, and otherwise says "not sure, ask your agriculture officer". In Bangla.<br>
       <sub>Hack-Nation 2026 · World Bank challenge · PyTorch · ONNX · FastAPI · Next.js</sub>
     </td>
