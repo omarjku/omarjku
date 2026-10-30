@@ -22,7 +22,7 @@ node motion/render.mjs leyrd --still 2.5,7                        # single PNG f
 motion/render-all.sh                                              # everything
 
 # a trailer: 1080p60 with motion blur (2 sub-frames per frame), soundtrack, and a silent WebP loop for the README
-node motion/render.mjs secondlook --scale 1.5 --fps 60 --shutter 2 --video --webp 960
+node motion/render.mjs secondeye --scale 1.5 --fps 60 --shutter 2 --video --webp 960
 ```
 
 Trailers are cut to a tempo: `film.js`'s `clock(bpm)` turns bars and beats into seconds, the shot list cuts on bar lines, and the same score drives `synth.py`, so every whoosh, impact and bell lands on the frame that needs it. The music is synthesised from oscillators and noise in NumPy; no samples or generative audio.
@@ -39,7 +39,7 @@ Frames render in parallel across CPU cores. Because `draw` depends only on `t`, 
 | `rice` | [omarjku/BengaliPharaohs](https://github.com/omarjku/BengaliPharaohs) | an offline phone answering for a rice leaf and saying "not sure" for a bean leaf |
 | `leyrd` | [omarjku/Leyrd](https://github.com/omarjku/Leyrd) | the engine's adjustments (wind, bike, feedback) turning into three layers |
 | `agentmesh` | [omarjku/pixel-perfect](https://github.com/omarjku/pixel-perfect) | agents bidding, the winner delivering, a Lightning payment |
-| `secondlook` | [omarjku/mixymatchy](https://github.com/omarjku/mixymatchy) | a 33-second trailer with soundtrack, built from the app's invented demo patient |
+| `secondeye` | [omarjku/mixymatchy](https://github.com/omarjku/mixymatchy) | a 33-second trailer with soundtrack: the real app on an invented patient |
 | `cnn` | [omarjku/Machine-Learning-Project](https://github.com/omarjku/Machine-Learning-Project) | the network's real layer shapes, from 100×100×1 to 20 scores |
 
 Numbers shown in the scenes come from each project's code and docs; each scene file says which parts are illustrative.
@@ -48,4 +48,4 @@ Numbers shown in the scenes come from each project's code and docs; each scene f
 
 GIFs only store the pixels that change between frames, so the scenes keep backgrounds still and move the subject (the banner's mesh holds still while signals travel along it). That keeps each README GIF around 1–2 MB.
 
-Fonts in `engine/fonts/` are from Google Fonts under the SIL Open Font License: Inter, JetBrains Mono, Instrument Serif, Space Grotesk, Hind Siliguri, IBM Plex Sans and IBM Plex Serif. The phone screenshots in `assets/secondlook/` are captures of the Second Look app running on its mock data. If Inter and Inter Display are installed locally they are used first.
+Fonts in `engine/fonts/` are from Google Fonts under the SIL Open Font License: Inter, JetBrains Mono, Instrument Serif, Space Grotesk, Hind Siliguri, IBM Plex Sans and IBM Plex Serif. The phone screenshots in `assets/secondeye/` are captures of the Second Eye app fed invented letters for an invented patient. If Inter and Inter Display are installed locally they are used first.
