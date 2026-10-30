@@ -114,6 +114,8 @@ export const FONTS = {
   serif: '"Instrument Serif", serif',
   grotesk: '"Space Grotesk", "Inter", "Inter Bundled", sans-serif',
   bangla: '"Hind Siliguri", sans-serif',
+  plex: '"IBM Plex Sans", "Inter", sans-serif',
+  plexSerif: '"IBM Plex Serif", Georgia, serif',
 };
 
 // Text with tracking, alpha and alignment in one call. Returns the width.
